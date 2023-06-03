@@ -1,73 +1,46 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# How to start
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+1. Create `.env` file in root folder
+2. Copy contents of `.env.example` to `.env` or feel free to create own `.env` file following example.
+3. Start database running `docker-compose.yaml` from `/db` folder or simply run following in terminal `docker-compose -f ./db/docker-compose.yaml up -d`
+4. Install dependencies using `yarn`
+5. Seed database using script `yarn run seed`
+6. Run application using `yarn start`
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Exchangers data
 
-## Description
+Test data present in repository in file `exchange-offices.txt`.
+After changes to test data and before seeding DB must be dumped.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Endpoints
 
-## Installation
+`/exchanger/top` - Returns top N exchangers for each country.
+Accepts param `limit`,defaults to `3`
 
-```bash
-$ yarn install
-```
+# Q/A
 
-## Running the app
+1.  How to change the code to support different file format versions?
 
-```bash
-# development
-$ yarn run start
+- Implement parsers for different formats using `IDataParser`.
+- Imlement manager which will resolve provided format to parser.
+- Update `IExchangeOfficesSource` adapters to work with manager
 
-# watch mode
-$ yarn run start:dev
+2. How will the import system change if in the future we need to get this data from a web API?
 
-# production mode
-$ yarn run start:prod
-```
+- Source adapter internals will be updated to work with API,rest logic won't be touched and will keep work as it did.
 
-## Test
+3.  If in the future it will be necessary to do the calculations using the national bank rate, how could this be added to the system?
 
-```bash
-# unit tests
-$ yarn run test
+    I see slow & accurate and quick variants
 
-# e2e tests
-$ yarn run test:e2e
+    slow - fetching relevant rates,map transactions with rates and do calculations,rework query implementation(get rid of raw sql since it works only with DB data and fetched rates isnt there)
 
-# test coverage
-$ yarn run test:cov
-```
+    quick - poll rates from bank by cron or when bank reports(with webhook ?) new rates.
+    I assume that quick variant could be achieved by implementing service which will handle new rates and update DB
 
-## Support
+4.  How would it be possible to speed up the execution of requests if the task allowed you to update market data once a day or even less frequently? Please explain all possible solutions you could think of.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Store all results in DB so in future this data could be accessed
+- key/value storage(redis?)
+- Store data in slices in some time series DB(Influx?)And querying only data that is in range of request,should work faster than do same operations using regular DB
+- Storing data slices in CDN
