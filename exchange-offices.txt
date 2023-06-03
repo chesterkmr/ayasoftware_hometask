@@ -1,0 +1,488 @@
+exchange-offices
+  exchange-office
+    id = 1
+    name = Exchanger 1
+    country = UKR
+    exchanges
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 16:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 16:00:00
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 15:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 02:02:00
+    rates
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 45
+        date = 2023-06-01 15:44:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 42
+        out = 1
+        date = 2023-06-01 15:45:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = UAH
+        in = 1
+        out = 36
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = USD
+        in = 35.714
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = EUR
+        in = 1.15
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = USD
+        in = 0.909
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+  exchange-office
+    id = 2
+    name = Exchanger 2
+    country = PLN
+    exchanges
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 16:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 16:00:00
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 15:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 02:02:00
+    rates
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 45
+        date = 2023-06-01 15:44:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 42
+        out = 1
+        date = 2023-06-01 15:45:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = UAH
+        in = 1
+        out = 36
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = USD
+        in = 35.714
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = EUR
+        in = 1.15
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = USD
+        in = 0.909
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+  exchange-office
+    id = 3
+    name = Exchanger 3
+    country = PLN
+    exchanges
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 16:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 16:00:00
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 15:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 02:02:00
+    rates
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 45
+        date = 2023-06-01 15:44:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 42
+        out = 1
+        date = 2023-06-01 15:45:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = UAH
+        in = 1
+        out = 36
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = USD
+        in = 35.714
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = EUR
+        in = 1.15
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = USD
+        in = 0.909
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+  exchange-office
+    id = 4
+    name = Exchanger 4
+    country = PLN
+    exchanges
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 16:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 16:00:00
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 15:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 02:02:00
+    rates
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 45
+        date = 2023-06-01 15:44:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 42
+        out = 1
+        date = 2023-06-01 15:45:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = UAH
+        in = 1
+        out = 36
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = USD
+        in = 35.714
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = EUR
+        in = 1.15
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = USD
+        in = 0.909
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+  exchange-office
+    id = 5
+    name = Exchanger 5
+    country = PLN
+    exchanges
+      exchange
+        from = EUR
+        to = UAH
+        ask = 40000000
+        date = 2023-06-01 16:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 16:00:00
+      exchange
+        from = EUR
+        to = UAH
+        ask = 4000
+        date = 2023-06-01 15:00:00
+      exchange
+        from = UAH
+        to = EUR
+        ask = 100
+        date = 2023-06-01 02:02:00
+    rates
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 45
+        date = 2023-06-01 15:44:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 42
+        out = 1
+        date = 2023-06-01 15:45:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = UAH
+        in = 1
+        out = 36
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = USD
+        in = 35.714
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = USD
+        to = EUR
+        in = 1.15
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = USD
+        in = 0.909
+        out = 1
+        date = 2023-06-01 01:00:00
+        reserve = 100000
+      rate
+        from = EUR
+        to = UAH
+        in = 1
+        out = 40
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+      rate
+        from = UAH
+        to = EUR
+        in = 38
+        out = 1
+        date = 2023-06-01 00:01:00
+        reserve = 100000
+countries
+  country
+    code = UKR
+    name = Ukraine
+  country
+    code = PLN
+    name = Poland
